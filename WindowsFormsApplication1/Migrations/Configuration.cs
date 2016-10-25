@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WindowsFormsApplication1.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<WindowsFormsApplication1.context>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1.Migrations
             ContextKey = "WindowsFormsApplication1.Context";
         }
 
-        protected override void Seed(WindowsFormsApplication1.Context context)
+        protected override void Seed(WindowsFormsApplication1.context context)
         {
             //  This method will be called after migrating to the latest version.
 

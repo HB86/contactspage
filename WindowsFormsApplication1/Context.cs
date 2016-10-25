@@ -6,9 +6,9 @@ namespace WindowsFormsApplication1
     using System.Linq;
     //Add-Migration
     //Update-Database
-    public partial class Context : DbContext
+    public partial class context : DbContext
     {
-        public Context()
+        public context()
             : base("name=Database1Entities")
         {
         }
