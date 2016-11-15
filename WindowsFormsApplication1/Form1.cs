@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            //inactive
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,11 +30,16 @@ namespace WindowsFormsApplication1
             {
                 Contact contact = new Contact();
                 contact.Email = Txt_Email.Text;
+                //maps email field to database
                 contact.FirstName = txt_FirstName.Text;
+                //maps first name field to database
                 contact.LastName = txt_LastName.Text;
+                //maps last name to database
                 contact.Phone = txt_Phone.Text;
+                //maps phone number to database
                 ctx.Contacts.Add(contact);
                 ctx.SaveChanges();
+                //Saves contact information to database on click
             }
 
 
@@ -42,12 +47,12 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //inactive
+            //inactive coming later
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //inactive
+            //inactive coming later 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +61,10 @@ namespace WindowsFormsApplication1
             using (var context = new context())
             {
                 this.dataGridView1.DataSource = context.Contacts.ToList();
+
+                //Reads data from database and displays in data grid
             }
+
         }
     }
 }
